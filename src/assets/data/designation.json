@@ -1,0 +1,103 @@
+[
+   {
+      "Name": "Chairman",
+      "Short_Name": "CHAIRMAN"
+   },
+   {
+      "Name": "Managing Director",
+      "Short_Name": "MD"
+   },
+   {
+      "Name": "General Manager",
+      "Short_Name": "GM"
+   },
+   {
+      "Name": "Deputy General Manager",
+      "Short_Name": "DGM"
+   },
+   {
+      "Name": "Assistant General Manager",
+      "Short_Name": "AGM"
+   },
+   {
+      "Name": "Senior Executive",
+      "Short_Name": "Sr. Exe."
+   },
+   {
+      "Name": "Executive",
+      "Short_Name": "Exe."
+   },
+   {
+      "Name": "Junior Executive",
+      "Short_Name": "Jr. Exe."
+   },
+   {
+      "Name": "Deputy Manager",
+      "Short_Name": "DM"
+   },
+   {
+      "Name": "Manager",
+      "Short_Name": "Manager"
+   },
+   {
+      "Name": "Accounts Officer",
+      "Short_Name": "Acc. Off."
+   },
+   {
+      "Name": "Shift - in - Charge",
+      "Short_Name": "S.I."
+   },
+   {
+      "Name": "Asstt. Production Officer",
+      "Short_Name": "APO"
+   },
+   {
+      "Name": "Sub Asstt. Engr.",
+      "Short_Name": "SAE"
+   },
+   {
+      "Name": "Production Officer",
+      "Short_Name": "P.O."
+   },
+   {
+      "Name": "Office Assistant",
+      "Short_Name": "Off. Asstt."
+   },
+   {
+      "Name": "Production Supervisor",
+      "Short_Name": "P.S."
+   },
+   {
+      "Name": "Asstt. Production Superviser",
+      "Short_Name": "APS"
+   },
+   {
+      "Name": "Production Clark",
+      "Short_Name": "PC"
+   },
+   {
+      "Name": "Quality Control Superviser",
+      "Short_Name": "SQC"
+   },
+   {
+      "Name": "Time Keeper",
+      "Short_Name": "T.K."
+   },
+   {
+      "Name": "Store Officer",
+      "Short_Name": "S.O."
+   },
+   {
+      "Name": "Assistant Production Clark",
+      "Short_Name": "APC"
+   },
+   {
+      "Name": "Peon",
+      "Short_Name": "Peon"
+   },
+   {
+      "Name": "Driver",
+      "Short_Name": "Driver"
+   }
+]
+

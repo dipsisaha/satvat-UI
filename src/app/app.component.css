@@ -1,0 +1,17 @@
+
+.appcontainer {
+	background-color: white;
+} 
+
+.mainPanel{
+	padding-left:0px;
+	max-width:100%;
+	padding-right:0px;
+}
+.leftsidepanel{
+	background-color: white;
+}
+.leftsidepanelColor{
+	background-color: #008081;
+	width: 15%;
+}

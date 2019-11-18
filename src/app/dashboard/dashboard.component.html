@@ -1,0 +1,57 @@
+<div class="formcontainer">
+	<form #accRegForm="ngForm">
+	<div class="row">
+			<div class="col-md-12" style="padding-left: 50px;">
+					<div class="empsection">
+							<div class="subheading">Company Profile</div>
+					<div class="row" style="padding-top: 16px;">
+							<div class="col-md-6 mt-2">
+									<label class ="heading">Name :</label>&nbsp;&nbsp;
+									<input type="text"  class="inputBox" name="userName" #userName="ngModel" [(ngModel)]="model.userName" style="width: 430px;" required>
+									<p class="invalid" [class.d-none]="userName.valid || userName.untouched"> Name cannot be Blank</p>
+								</div>     
+					 </div>
+					 <br>
+					 <div class="row" >
+							<div class="col-md-6 mt-2">
+									<label class ="heading">Email :</label>&nbsp;&nbsp;
+									<input type="email"  class="inputBox" name="email" #email="ngModel" [(ngModel)]="model.email" style="width: 459px;" required>
+									<p class="invalid" [class.d-none]="email.valid || email.untouched"> Email cannot be Blank</p>
+							</div>	
+				 </div>  
+				 <br>
+				 <div class="row" >
+					<div class="col-md-6 mt-2">
+						<label class ="heading">Address :</label>&nbsp;&nbsp;
+						<input type="email"  class="inputBox" name="address" #address="ngModel" [(ngModel)]="model.address" style="width: 459px;" required>
+						<p class="invalid" [class.d-none]="address.valid || address.untouched"> Address cannot be Blank</p>
+				</div>	
+			 </div>  
+			 <br>
+			 <div class="row" >
+				<div class="col-md-6 mt-2">
+						<label class ="heading">Facebook Url:</label>&nbsp;&nbsp;
+						<input type="text"  class="inputBox" name="fb"  [(ngModel)]="model.fb" style="width: 477px;" >
+				</div>	
+			</div>  
+			<br>
+			<div class="row" >
+				<div class="col-md-6 mt-2">
+						<label class ="heading">Instagram Url:</label>&nbsp;&nbsp;
+						<input type="text"  class="inputBox" name="insta"  [(ngModel)]="model.insta" style="width: 457px;" >
+				</div>	
+			</div>  
+			<br>
+						<br>
+						<div class="row" >
+								<button [disabled]="accRegForm.form.invalid" [ngClass]="accRegForm.form.invalid ?'diabled-class':'buttonbox'"  (click)="submit();" style="margin-top: 22px; margin-left: 550px;">Submit</button>
+								<br>
+								<!-- <div class="buttonbox pointer" (click)="submit()" style="margin-top: 22px; margin-left: 550px;">
+										Submit
+									</div> -->
+						</div>
+						</div>
+			</div>
+	</div>  
+</form> 
+</div>

@@ -1,0 +1,15 @@
+<nav *ngIf="showSidePanel" class="navbar">	
+	<div class="text-center sidePanel">
+	    <div class="logo">
+					<img src="../assets/img/no_logo.png">
+				  <!-- <div *ngIf="currentOrg.panelId==constants.ORG_SATCOM">
+					
+				  </div> -->
+	    </div>
+	    <div class="text-left">
+	    	<div *ngFor="let menu of currentOrg.menuList" [ngClass]="(isSelected && isSelected == menu.id)?'menuItemActive':'menuItem'">
+	    		<span (click)="selectPanel(menu)" class="pointer"><img src='../assets/img/{{menu.icon}}' class="icon"> &nbsp;{{menu.description}}</span>
+	    	</div>
+	    </div>
+    </div>
+</nav>

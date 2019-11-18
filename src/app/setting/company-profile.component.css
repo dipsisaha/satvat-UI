@@ -1,0 +1,122 @@
+.title{
+    font-size: 25px;
+    padding-top: 20px;
+    padding-left: 342px;
+  }
+  .back{
+    padding-top: 30px;
+    padding-left: 23px;
+    font-weight: bolder;
+    font-size: 15px;
+  }
+  .inputBox{
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid #008081; 
+    font-size: 15px; 
+  }
+  h4 {
+    width: 100%; 
+    text-align: center; 
+    border-bottom: 1px solid #008081; 
+    line-height: 0.1em;
+    margin: 10px 0 20px; 
+    width: 96%;
+  } 
+  .empsection{
+    width: 97%;
+    height:  516px;
+    margin: 0;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #008081;
+    padding-left: 25px;
+  }
+  .subheading {
+    width: 141px;
+    margin-top: -13px;
+    margin-left: 14px;
+    background: white;
+    font-size: 17px;
+    font-weight: bold;
+  }
+  .invalid{
+    color               : red;
+    font-size           : 14.0px;
+  }
+  
+  .btnbg {
+    background-color    : #008081;
+    color               : white;
+    font-size           : 16.0px;
+    top                 : 0px;
+    left                : 0px;
+    width               : 150px;
+    height              : 40px;
+    margin              : 0;
+    border-style	      : none;
+  }
+  
+  .diabled-class {
+    background-color    : rgba(157, 157, 157, 1.0);
+    color               : white;
+    font-size           : 16.0px;
+    top                 : 0px;
+    left                : 0px;
+    width               : 150px;
+    height              : 40px;
+    margin              : 0;
+    border-style	      : none;
+  }
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #008081;
+  border-style: none none solid none;
+  background-color:white;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 40px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #008081;
+  color: white;
+}
+ 
+.vl {
+  border-left: 1px solid gray;
+  height: 400px;
+  position: absolute;
+  left: 50%;
+  margin-left: -3px;
+  top: 60;
+}
+.hl {
+  border-bottom:  1px dotted gray;
+  width: 550px;
+  margin-left: 11px;
+  margin-top: 0px;
+  padding-bottom: 25px;
+}
+.isCheckBill{
+  margin-left: 42%;
+  margin-top: auto;
+}

@@ -1,0 +1,149 @@
+<div class="row">
+    <div class="col-6 back gray pointer" (click)="backToSetting()"><img src="../assets/img/pagination_left-chevron.png"> Back</div>
+    <div class="col-6">&nbsp;</div>
+</div>
+<div class="row">
+  <div class="col-6 title gray"><b>Manage Vendor</b></div>
+  <div class="col-6">
+    <div class="buttonbox pointer" (click)="navigateToAddVendor()">
+        Add Vendor
+    </div>
+  </div>
+</div>
+<br>
+<div class="row">
+  <div class="col-md-12">
+      <table class="table table-hover border-0 font12">
+          <thead>
+            <tr class="heading text-left">
+              <th class="pointer" (click)="setOrder('vendorId','string',reverse['vendorId'])" style="width:12%">
+                Vendor Id
+                <span>
+                    <img src="../assets/img/sort_black_up.png" *ngIf="reverse['vendorId']==undefined || order != 'vendorId'|| reverse['vendorId']" 
+                    [ngClass]="{'botharrowup':(reverse['vendorId']==undefined|| order != 'vendorId'),
+                            'singlearrowup':(reverse['vendorId'])}"
+                    >
+                </span>
+                <span>
+                    <img src="../assets/img/sort_black_down.png"  *ngIf="reverse['vendorId']==undefined || order != 'vendorId'|| !reverse['vendorId']"
+                    [ngClass]="{'botharrowdwn':(reverse['vendorId']==undefined|| order != 'vendorId'),
+                          'singlearrowdwn':(reverse['vendorId']!=undefined && !reverse['vendorId']&& order == 'vendorId')}"
+                    >
+                </span>
+              </th>
+              <th class="pointer" (click)="setOrder('vendorName','string',reverse['vendorName'])" style="width:12%">Name
+                  <span>
+                      <img src="../assets/img/sort_black_up.png" *ngIf="reverse['vendorName']==undefined || order != 'vendorName'|| reverse['vendorName']" 
+                      [ngClass]="{'botharrowup':(reverse['vendorName']==undefined|| order != 'vendorName'),
+                              'singlearrowup':(reverse['vendorName'])}"
+                      >
+                  </span>
+                  <span>
+                      <img src="../assets/img/sort_black_down.png"  *ngIf="reverse['vendorName']==undefined || order != 'vendorName'|| !reverse['vendorName']"
+                      [ngClass]="{'botharrowdwn':(reverse['vendorName']==undefined|| order != 'vendorName'),
+                            'singlearrowdwn':(reverse['vendorName']!=undefined && !reverse['vendorName']&& order == 'vendorName')}"
+                      >
+                  </span>
+              </th>
+              <th class="pointer" (click)="setOrder('vendorAddress','string',reverse['vendorAddress'])" style="width:12%">Address
+                  <span>
+                      <img src="../assets/img/sort_black_up.png" *ngIf="reverse['vendorAddress']==undefined || order != 'vendorAddress'|| reverse['vendorAddress']" 
+                      [ngClass]="{'botharrowup':(reverse['vendorAddress']==undefined|| order != 'vendorAddress'),
+                              'singlearrowup':(reverse['vendorAddress'])}"
+                      >
+                  </span>
+                  <span>
+                      <img src="../assets/img/sort_black_down.png"  *ngIf="reverse['vendorAddress']==undefined || order != 'vendorAddress'|| !reverse['vendorAddress']"
+                      [ngClass]="{'botharrowdwn':(reverse['vendorAddress']==undefined|| order != 'vendorAddress'),
+                            'singlearrowdwn':(reverse['vendorAddress']!=undefined && !reverse['vendorAddress']&& order == 'vendorAddress')}"
+                      >
+                  </span>
+              </th> 
+              <th class="pointer" (click)="setOrder('vendorContactNumber','string',reverse['vendorContactNumber'])" style="width:12%">Phone No.
+                <span>
+                    <img src="../assets/img/sort_black_up.png" *ngIf="reverse['vendorContactNumber']==undefined || order != 'vendorContactNumber'|| reverse['vendorContactNumber']" 
+                    [ngClass]="{'botharrowup':(reverse['vendorContactNumber']==undefined|| order != 'vendorContactNumber'),
+                            'singlearrowup':(reverse['vendorContactNumber'])}"
+                    >
+                </span>
+                <span>
+                    <img src="../assets/img/sort_black_down.png"  *ngIf="reverse['vendorContactNumber']==undefined || order != 'vendorContactNumber'|| !reverse['vendorContactNumber']"
+                    [ngClass]="{'botharrowdwn':(reverse['vendorContactNumber']==undefined|| order != 'vendorContactNumber'),
+                          'singlearrowdwn':(reverse['vendorContactNumber']!=undefined && !reverse['vendorContactNumber']&& order == 'vendorContactNumber')}"
+                    >
+                </span>
+            </th> 
+            <th class="pointer" (click)="setOrder('emailId','string',reverse['emailId'])" style="width:12%">Email 
+              <span>
+                  <img src="../assets/img/sort_black_up.png" *ngIf="reverse['emailId']==undefined || order != 'emailId'|| reverse['emailId']" 
+                  [ngClass]="{'botharrowup':(reverse['emailId']==undefined|| order != 'emailId'),
+                          'singlearrowup':(reverse['emailId'])}"
+                  >
+              </span>
+              <span>
+                  <img src="../assets/img/sort_black_down.png"  *ngIf="reverse['emailId']==undefined || order != 'emailId'|| !reverse['emailId']"
+                  [ngClass]="{'botharrowdwn':(reverse['emailId']==undefined|| order != 'emailId'),
+                        'singlearrowdwn':(reverse['emailId']!=undefined && !reverse['emailId']&& order == 'emailId')}"
+                  >
+              </span>
+          </th> 
+                     
+              <th  style="width:12%">Action</th>
+            </tr>
+          </thead>
+          <tbody *ngIf="!listdata || listdata.length ==0 ">
+            <tr style="text-align:center">
+              <td colspan=6> No Record found</td>
+            </tr>
+          </tbody>
+          <tbody *ngIf="listdata || listdata.length > 0 ">
+            <tr *ngFor="let row of listdata| sort: order:orderType:reverseOrder | paginate: pagination;let i = index">
+              <td (click)="openDetails(row)" style="width:12%">{{row.vendorId}}</td>
+              <td style="width:14%">{{row.vendorName}}</td>
+              <td (click)="openDetails(row)" style="width:12%">{{row.vendorAddress}}</td>
+              <td (click)="openDetails(row)" style="width:12%">{{row.vendorContactNumber}}</td>
+              <td (click)="openDetails(row)" style="width:12%">{{row.emailId}}</td>
+              <td (click)="openDetails(row)" style="width:12%"> 
+                <img src="../assets/img/edit.png" style="width:14px;" (click)="updateVendor(row.vendorId)" class="pointer">
+                &nbsp;
+                <img src="../assets/img/delete.png" style="width:20px;"  (click)="deleteVendor(row.vendorId)" class="pointer"></td>
+           </tr>
+          </tbody>
+        </table> 
+        <hr/>
+    <div class="paginationsection row pt-2 pb-2 font12" *ngIf="listdata.length !=0">
+        <div class="col-6 pagesizeselection text-left">
+          <span >Items per page:</span>
+          &nbsp;
+          <select [(ngModel)]="pagination.itemsPerPage" (ngModelChange)="pagination.currentPage = 1" class="pagesizeselectiondrpdwn">
+            <option>15</option>
+            <option>30</option>
+            <option>50</option>
+            <option>100</option>
+            <option value="{{listdata.length}}">All</option>
+          </select>
+          &nbsp;&nbsp;
+          <span >
+            |&nbsp;&nbsp;{{(pagination.currentPage*pagination.itemsPerPage) - pagination.itemsPerPage + 1}}
+            -
+            {{(pagination.currentPage*pagination.itemsPerPage > listdata.length)?listdata.length:(pagination.currentPage*pagination.itemsPerPage)}}
+            of {{listdata.length}} items
+          </span>
+        </div>
+        <div class="col-6 text-right">
+        <pagination-template #p="paginationApi" (pageChange)="pagination.currentPage = $event" [maxSize]="(listdata.length/pagination.itemsPerPage)|ceil">
+           <span class="lightgray pr-4" style="border-right:1px solid #dfe3e6;font-size:12px;">{{p.getCurrent()}} of {{p.getLastPage()}} pages</span>
+             <span class="pagination-previous pointer pr-4 pl-4 lightgray" [class.disabled]="p.isFirstPage()"  
+                 style="border-right:1px solid #dfe3e6;">
+                <img (click)="p.previous()" src="../assets/img/pagination_left-chevron.png">
+             </span>
+            <span  style="border-bottom:1px dashed;font-size:14px;" class="pr-2 pl-2 ml-2 mr-2">{{p.getCurrent()}}</span>
+            <span class="pagination-next pointer pl-4 lightgray" [class.disabled]="p.isLastPage()" 
+                style="border-left:1px solid #dfe3e6;font-size:14px;">
+                <img (click)="p.next()" src="../assets/img/pagination_right-chevron.png">
+            </span>
+        </pagination-template>
+        </div>
+      </div>  
+  </div>
+</div>

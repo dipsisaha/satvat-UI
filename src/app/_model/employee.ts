@@ -1,0 +1,18 @@
+export interface EmployeeList {
+    email:string,
+    password:string,
+    empID:string,
+    empCode:string,
+    empName:string,
+    desigID:string,
+    designation:string,
+    deptID:string,
+    department:string,
+    personalDetails:any,
+    emergencyContact:any,
+    otherExperiences:any,
+    companyProperty:any,
+    employmentHistory:any,
+    academicQualification:any,
+    experiences:any,
+}

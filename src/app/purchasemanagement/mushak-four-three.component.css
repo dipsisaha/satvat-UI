@@ -1,0 +1,25 @@
+table {
+    border-collapse: collapse;
+    height: 100%;
+    font-weight: bold;
+  }
+  
+  table, th, td {
+    border: 1px solid black;
+    
+  }
+.widthSize {
+    width: 20%;
+}
+.vl {
+    border-right: 1px solid black;
+    height: auto;
+    padding-top: 15px;
+    text-align: center;
+  }
+.borderLine{
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+
+}

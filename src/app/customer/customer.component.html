@@ -1,0 +1,149 @@
+<div class="row">
+    <div class="col-6 back gray pointer" (click)="backToSetting()"><img src="../assets/img/pagination_left-chevron.png"> Back</div>
+    <div class="col-6">&nbsp;</div>
+</div>
+<div class="row">
+  <div class="col-6 title gray"><b>Manage Buyer</b></div>
+  <div class="col-6">
+    <div class="buttonbox pointer" (click)="navigateToAddCustomer()">
+        Add Buyer
+    </div>
+  </div>
+</div>
+<br>
+<div class="row">
+  <div class="col-md-12">
+      <table class="table table-hover border-0 font12">
+          <thead>
+            <tr class="heading text-left">
+              <th class="pointer" (click)="setOrder('itemCode','string',reverse['itemCode'])" style="width:12%">
+                Buyer Id
+                <span>
+                    <img src="../assets/img/sort_black_up.png" *ngIf="reverse['itemCode']==undefined || order != 'itemCode'|| reverse['itemCode']" 
+                    [ngClass]="{'botharrowup':(reverse['itemCode']==undefined|| order != 'itemCode'),
+                            'singlearrowup':(reverse['itemCode'])}"
+                    >
+                </span>
+                <span>
+                    <img src="../assets/img/sort_black_down.png"  *ngIf="reverse['itemCode']==undefined || order != 'itemCode'|| !reverse['itemCode']"
+                    [ngClass]="{'botharrowdwn':(reverse['itemCode']==undefined|| order != 'itemCode'),
+                          'singlearrowdwn':(reverse['itemCode']!=undefined && !reverse['itemCode']&& order == 'itemCode')}"
+                    >
+                </span>
+              </th>
+              <th class="pointer" (click)="setOrder('itemName','string',reverse['itemName'])" style="width:12%">Name
+                  <span>
+                      <img src="../assets/img/sort_black_up.png" *ngIf="reverse['itemName']==undefined || order != 'itemName'|| reverse['empName']" 
+                      [ngClass]="{'botharrowup':(reverse['itemName']==undefined|| order != 'itemName'),
+                              'singlearrowup':(reverse['itemName'])}"
+                      >
+                  </span>
+                  <span>
+                      <img src="../assets/img/sort_black_down.png"  *ngIf="reverse['itemName']==undefined || order != 'itemName'|| !reverse['itemName']"
+                      [ngClass]="{'botharrowdwn':(reverse['itemName']==undefined|| order != 'itemName'),
+                            'singlearrowdwn':(reverse['itemName']!=undefined && !reverse['itemName']&& order == 'itemName')}"
+                      >
+                  </span>
+              </th>
+              <th class="pointer" (click)="setOrder('itemPrice','string',reverse['itemPrice'])" style="width:12%">Price
+                  <span>
+                      <img src="../assets/img/sort_black_up.png" *ngIf="reverse['itemPrice']==undefined || order != 'itemPrice'|| reverse['itemPrice']" 
+                      [ngClass]="{'botharrowup':(reverse['itemPrice']==undefined|| order != 'itemPrice'),
+                              'singlearrowup':(reverse['itemPrice'])}"
+                      >
+                  </span>
+                  <span>
+                      <img src="../assets/img/sort_black_down.png"  *ngIf="reverse['itemPrice']==undefined || order != 'itemPrice'|| !reverse['itemPrice']"
+                      [ngClass]="{'botharrowdwn':(reverse['itemPrice']==undefined|| order != 'itemPrice'),
+                            'singlearrowdwn':(reverse['itemPrice']!=undefined && !reverse['itemPrice']&& order == 'itemPrice')}"
+                      >
+                  </span>
+              </th> 
+              <th class="pointer" (click)="setOrder('itemUnit','string',reverse['itemUnit'])" style="width:12%">Unit
+                <span>
+                    <img src="../assets/img/sort_black_up.png" *ngIf="reverse['itemUnit']==undefined || order != 'itemUnit'|| reverse['itemUnit']" 
+                    [ngClass]="{'botharrowup':(reverse['itemUnit']==undefined|| order != 'itemUnit'),
+                            'singlearrowup':(reverse['itemUnit'])}"
+                    >
+                </span>
+                <span>
+                    <img src="../assets/img/sort_black_down.png"  *ngIf="reverse['itemUnit']==undefined || order != 'itemUnit'|| !reverse['itemUnit']"
+                    [ngClass]="{'botharrowdwn':(reverse['itemUnit']==undefined|| order != 'itemUnit'),
+                          'singlearrowdwn':(reverse['itemUnit']!=undefined && !reverse['itemUnit']&& order == 'itemUnit')}"
+                    >
+                </span>
+            </th> 
+            <th class="pointer" (click)="setOrder('status','string',reverse['status'])" style="width:12%">Status
+              <span>
+                  <img src="../assets/img/sort_black_up.png" *ngIf="reverse['status']==undefined || order != 'status'|| reverse['status']" 
+                  [ngClass]="{'botharrowup':(reverse['status']==undefined|| order != 'status'),
+                          'singlearrowup':(reverse['status'])}"
+                  >
+              </span>
+              <span>
+                  <img src="../assets/img/sort_black_down.png"  *ngIf="reverse['status']==undefined || order != 'status'|| !reverse['status']"
+                  [ngClass]="{'botharrowdwn':(reverse['status']==undefined|| order != 'status'),
+                        'singlearrowdwn':(reverse['status']!=undefined && !reverse['status']&& order == 'status')}"
+                  >
+              </span>
+          </th> 
+                     
+              <th  style="width:12%">Action</th>
+            </tr>
+          </thead>
+          <tbody *ngIf="!listdata || listdata.length ==0 ">
+            <tr style="text-align:center">
+              <td colspan=6> No Record found</td>
+            </tr>
+          </tbody>
+          <tbody *ngIf="listdata || listdata.length > 0 ">
+            <tr *ngFor="let row of listdata| sort: order:orderType:reverseOrder | paginate: pagination;let i = index">
+              <td style="width:12%">{{row.itemCode}}</td>
+              <td style="width:14%">{{row.itemName}}</td>
+              <td style="width:12%">{{row.itemPrice}}</td>
+              <td style="width:12%">{{row.itemUnit}}</td>
+              <td style="width:12%">{{row.status}}</td>
+              <td style="width:12%"> 
+                <img src="../assets/img/edit.png" style="width:14px;" (click)="updateCustomer(row.itemCode)" class="pointer">
+                &nbsp;
+                <img src="../assets/img/delete.png" style="width:20px;"  (click)="deleteCustomer(row.itemCode)" class="pointer"></td>
+           </tr>
+          </tbody>
+        </table> 
+        <hr/>
+    <div class="paginationsection row pt-2 pb-2 font12" *ngIf="listdata.length !=0">
+        <div class="col-6 pagesizeselection text-left">
+          <span >Items per page:</span>
+          &nbsp;
+          <select [(ngModel)]="pagination.itemsPerPage" (ngModelChange)="pagination.currentPage = 1" class="pagesizeselectiondrpdwn">
+            <option>15</option>
+            <option>30</option>
+            <option>50</option>
+            <option>100</option>
+            <option value="{{listdata.length}}">All</option>
+          </select>
+          &nbsp;&nbsp;
+          <span >
+            |&nbsp;&nbsp;{{(pagination.currentPage*pagination.itemsPerPage) - pagination.itemsPerPage + 1}}
+            -
+            {{(pagination.currentPage*pagination.itemsPerPage > listdata.length)?listdata.length:(pagination.currentPage*pagination.itemsPerPage)}}
+            of {{listdata.length}} items
+          </span>
+        </div>
+        <div class="col-6 text-right">
+        <pagination-template #p="paginationApi" (pageChange)="pagination.currentPage = $event" [maxSize]="(listdata.length/pagination.itemsPerPage)|ceil">
+           <span class="lightgray pr-4" style="border-right:1px solid #dfe3e6;font-size:12px;">{{p.getCurrent()}} of {{p.getLastPage()}} pages</span>
+             <span class="pagination-previous pointer pr-4 pl-4 lightgray" [class.disabled]="p.isFirstPage()"  
+                 style="border-right:1px solid #dfe3e6;">
+                <img (click)="p.previous()" src="../assets/img/pagination_left-chevron.png">
+             </span>
+            <span  style="border-bottom:1px dashed;font-size:14px;" class="pr-2 pl-2 ml-2 mr-2">{{p.getCurrent()}}</span>
+            <span class="pagination-next pointer pl-4 lightgray" [class.disabled]="p.isLastPage()" 
+                style="border-left:1px solid #dfe3e6;font-size:14px;">
+                <img (click)="p.next()" src="../assets/img/pagination_right-chevron.png">
+            </span>
+        </pagination-template>
+        </div>
+      </div>  
+  </div>
+</div>

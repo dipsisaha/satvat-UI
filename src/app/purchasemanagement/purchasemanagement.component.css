@@ -1,0 +1,125 @@
+.title{
+    font-size: 25px;
+    padding-top: 30px;
+    padding-left: 40px;
+}
+.buttonbox{
+    margin-top: 30px;
+    opacity: 0.8;
+    background: #008081;
+    width: 118px;
+    height: 40px;
+    font-size: 14px;
+    color: #ffffff;
+    letter-spacing: 0;
+    line-height: 40px;
+    display: inline-block;
+    font-weight: bold;
+    margin-left: 402px;
+    text-align: center;
+}
+.table{
+    width: 100%;
+    max-width: 96%;
+    margin-bottom: 20px;
+    background-color: white;
+    margin-left: 2px;
+}
+.botharrowup{
+    margin-bottom:8px;
+    margin-left: 2px
+}
+
+.singlearrowup{
+    margin-bottom:8px;
+    margin-left: 2px
+}
+
+.botharrowdwn{
+  margin-left: -10px;
+    margin-top:6px;
+}
+
+.singlearrowdwn{
+    margin-left: 2px;
+    margin-top:5px;
+}
+.row{
+    margin-right: 0px;
+}
+.empsection{
+    width: 97%;
+    height:  190px;
+    margin: 0;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #008081;
+    padding-left: 25px;
+  }
+  .inputBox{
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid #008081; 
+    font-size: 15px; 
+  }
+  .btnbg {
+    background-color    : #008081;
+    color               : white;
+    font-size           : 16.0px;
+    top                 : 0px;
+    left                : 0px;
+    width               : 100px;
+    height              : 40px;
+    margin              : 0;
+    border-style	      : none;
+  }
+  :host /deep/.mydrp{
+    border:0;
+    border-radius:0px !important;
+    width:439px !important;
+    margin-left:0px !important;
+    line-height:1.5;
+}
+
+:host /deep/.selectiongroup{
+    border:0 !important;
+    border-radius:0px !important;
+    background-color:#f4f7fb !important;
+    border-bottom-style:solid !important;
+    border-bottom-width:2px !important;  	
+    line-height:1.5 !important;
+}
+
+:host /deep/.selection{
+    font-family:'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;  	
+    font-weight:bold !important;
+    border:0 !important;
+    border-radius:0px !important;
+    background-color:#f4f7fb !important;
+    font-size:18px !important;
+    color:inherit !important;
+    width:105% !important;
+}
+
+:host /deep/.btnclear{
+    display:none;
+}
+
+:host /deep/.btnpicker{
+    background-color:#f4f7fb !important;
+    color: inherit !important;
+}	
+
+:host /deep/.mydrpicon{
+    width: 5px;
+  height: 5px;
+  background-repeat: no-repeat;
+  font-size:0px;
+}
+
+:host /deep/.icon-mydrpcalendar{
+    font-size:0px;
+}

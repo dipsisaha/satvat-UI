@@ -1,0 +1,27 @@
+<nav *ngIf="showNavbar">
+    <div  class="header_bar row align-items-center justify-content-between">
+        <div class="col-6 searchText">
+           <!-- <span class="mr-4">SEARCH PO NUMBER</span><input type="text" class="input-box" [(ngModel)]="poNumber">
+           <img (click)="searchPO(poNumber,'3')" src="../../assets/img/search_btn.png" class="searchicon pointer">
+           <img  *ngIf="poNumber && poNumber != ''" (click)="clearSearch()"  src="../../assets/img/close_icon.png" class="clearicon pointer"> -->
+           <div class="row align-items-center">
+            <div class="col-4 ml-4 headerSection bold basecolor font-15">
+                Admin Panel
+            </div>       
+        </div>
+           
+        </div>
+        <div class="col-6 text-right"> 
+        	<div>
+        		<img *ngIf="constants.ORG_USER == currentOrg.orgId" src="../../assets/img/user.png" class="userprofile mr-2">
+        		<span class="mr-4 username">{{userName}}</span>
+        		<span class="ml-4 logout pointer mr-4"><a (click)="logout(currentOrg.logout)">Log out</a></span>
+        	</div>       	          
+        </div>
+    </div>
+    <hr>
+    <div class="clear"></div>
+</nav>
+
+
+

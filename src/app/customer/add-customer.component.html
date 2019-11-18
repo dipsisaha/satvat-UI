@@ -1,0 +1,130 @@
+<div class="row">
+    <div class="col-6 back gray pointer" (click)="backToCustomerList()"><img src="../assets/img/pagination_left-chevron.png"> Back</div>
+    <div class="col-6">
+      <div class="title gray" >
+        <b *ngIf="model.itemCode ==''">Add Customer</b>
+        <b *ngIf="model.itemCode !=''">Edit Customer</b>
+      </div>
+    </div>
+  </div>
+  <div class="formcontainer">
+    <form #accRegForm="ngForm">
+    <div class="row">
+        <div class="col-md-12" style="padding-left: 50px;">
+            <div class="empsection">
+                <div class="subheading">Buyer Details</div>
+            <!-- <div class="row" style="padding-top: 16px;">
+                <div class="col-md-6 mt-2">
+                    <label class ="heading">Vendor :</label>&nbsp;&nbsp;
+                    <select class="inputBox" name="vendorId" #vendorId="ngModel" [(ngModel)]="model.vendorId"  required style="width: 425px;"(click)="CustomerDropDown('vendorId',$event)">
+                      <option value="{{row.vendorId}}" *ngFor="let row of listVendordata">{{row.vendorName}}</option>
+                     </select>
+                    <p class="invalid" [class.d-none]="vendorId.valid || vendorId.untouched"> Please choose vendor</p>
+                </div>
+            </div>
+            <br> -->
+            <div class="row" style="padding-top: 16px;">
+                <div class="col-md-6 mt-2">
+                    <label class ="heading">Customer Code :</label>&nbsp;&nbsp;
+                    <input type="text"  class="inputBox" name="itemName" #itemName="ngModel" [(ngModel)]="model.itemName" style="width: 430px;" required>
+                    <input type="text"  class="inputBox" name="itemCode" [(ngModel)]="model.itemCode" hidden>
+                    <p class="invalid" [class.d-none]="itemName.valid || itemName.untouched"> Name cannot be Blank</p>
+                  </div>  
+                  <div class="col-md-6 mt-2">
+                      <label class ="heading">Customer Name :</label>&nbsp;&nbsp;
+                      <input type="text"  class="inputBox" name="itemDescription" #itemDescription="ngModel" [(ngModel)]="model.itemDescription" style="width: 459px;" required>
+                      <p class="invalid" [class.d-none]="itemDescription.valid || itemDescription.untouched"> Description cannot be Blank</p>
+                  </div>	   
+             </div>
+             <br>
+           <div class="row" >
+              <div class="col-md-6 mt-2">
+                  <label class ="heading">House :</label>&nbsp;&nbsp;
+                  <input type="text"  class="inputBox" name="itemPrice" #itemPrice="ngModel"  [(ngModel)]="model.itemPrice" style="width: 477px;" required>
+                  <p class="invalid" [class.d-none]="itemPrice.valid || itemPrice.untouched"> Price cannot be Blank</p>
+              </div>
+              <div class="col-md-6 mt-2">
+                  <label class ="heading">Road :</label>&nbsp;&nbsp;
+                  <input type="text"  class="inputBox" name="itemUnit"  [(ngModel)]="model.itemUnit" style="width: 477px;" >
+              </div>	
+         </div>   
+        <br>
+        <div class="row" >
+          <div class="col-md-6 mt-2">
+              <label class ="heading">Sector :</label>&nbsp;&nbsp;
+              <input type="text"  class="inputBox" name="itemCD"  [(ngModel)]="model.itemCD" style="width: 477px;" >
+          </div>
+          <div class="col-md-6 mt-2">
+            <label class ="heading">Upazila :</label>&nbsp;&nbsp;
+            <input type="text"  class="inputBox" name="itemRD"  [(ngModel)]="model.itemRD" style="width: 477px;" >
+        </div>
+        </div>   
+        <br>
+        <div class="row" >
+          <div class="col-md-6 mt-2">
+              <label class ="heading">District :</label>&nbsp;&nbsp;
+              <input type="text"  class="inputBox" name="itemSD"  [(ngModel)]="model.itemSD" style="width: 477px;" >
+          </div>
+          <div class="col-md-6 mt-2">
+            <label class ="heading">VAT Reg. :</label>&nbsp;&nbsp;
+            <input type="text"  class="inputBox" name="itemAIT"  [(ngModel)]="model.itemAIT" style="width: 477px;" >
+        </div>
+        </div>
+        <br>
+        <div class="row" >
+          <div class="col-md-6 mt-2">
+              <label class ="heading">Mobile :</label>&nbsp;&nbsp;
+              <input type="text"  class="inputBox" name="itemATV"  [(ngModel)]="model.itemATV" style="width: 477px;" >
+          </div>
+          <div class="col-md-6 mt-2">
+            <label class ="heading">Email :</label>&nbsp;&nbsp;
+            <input type="text"  class="inputBox" name="itemTTI"  [(ngModel)]="model.itemTTI" style="width: 477px;" >
+        </div>
+        </div>
+        <br>
+        <div class="row" >
+            <div class="col-md-6 mt-2">
+                <label class ="heading">BIN# :</label>&nbsp;&nbsp;
+                <input type="radio" name="rawMat" value="Y" [(ngModel)]="model.rawMat" [checked]="model.rawMat=='Y'?checked:''"> Raw Material
+                <!-- <input type="radio" name="rawMat" value="N" [(ngModel)]="model.rawMat" [checked]="model.rawMat=='N'?checked:''"> Finished Goods -->
+            </div>
+          <div class="col-md-6 mt-2">
+              <label class ="heading">e-TIN :</label>&nbsp;&nbsp;
+              <input type="text"  class="inputBox" name="itemVat"  [(ngModel)]="model.itemVat" style="width: 477px;" >
+          </div>
+        </div>  
+        <br>
+        <div class="row" >
+          <div class="col-md-6 mt-2">
+              <label class ="heading">NID :</label>&nbsp;&nbsp;
+              <input type="radio" name="rawMat" value="Y" [(ngModel)]="model.rawMat" [checked]="model.rawMat=='Y'?checked:''"> Raw Material
+              <!-- <input type="radio" name="rawMat" value="N" [(ngModel)]="model.rawMat" [checked]="model.rawMat=='N'?checked:''"> Finished Goods -->
+          </div>
+        <div class="col-md-6 mt-2">
+            <label class ="heading">TDS :</label>&nbsp;&nbsp;
+            <input type="text"  class="inputBox" name="itemVat"  [(ngModel)]="model.itemVat" style="width: 477px;" >
+        </div>
+      </div> 
+        <div class="row" >
+          <div class="col-md-6 mt-2">
+              <label class ="heading">Status:</label>&nbsp;&nbsp;
+              <select name="status"  [(ngModel)]="model.status">
+                <option value="A" >Active</option>
+                <option value="I">InActive</option>
+              </select>
+          </div>	
+        </div>
+        <br>
+              <br>
+              <div class="row" >
+                  <button [disabled]="accRegForm.form.invalid" [ngClass]="accRegForm.form.invalid ?'diabled-class':'buttonbox'"  (click)="submit();" style="margin-top: 22px; margin-left: 550px;">Submit</button>
+                  <br>
+                  <!-- <div class="buttonbox pointer" (click)="submit()" style="margin-top: 22px; margin-left: 550px;">
+                      Submit
+                    </div> -->
+              </div>
+              </div>
+        </div>
+    </div>  
+  </form> 
+  </div>

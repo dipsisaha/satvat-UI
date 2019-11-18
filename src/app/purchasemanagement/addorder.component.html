@@ -1,0 +1,286 @@
+<div class="row">
+  <div class="col-6 back gray pointer" (click)="backToOrderList()"><img src="../assets/img/pagination_left-chevron.png"> Back</div>
+  <div class="col-6">
+    <div class="title gray" >
+      <b>Add Order</b>
+    </div>
+  </div>
+</div>
+<br>
+<div class="formcontainer">
+    <div class="tab">
+        <button class="tablinks" [className]="isDetailsTabActive?'active':''" (click)="openTab('details')">Details</button>
+        <button class="tablinks"  [className]="isExtraTabActive?'active':''" (click)="openTab('extra')">Extras</button>
+        <button class="tablinks"  [className]="isWastageTabActive?'active':''" (click)="openTab('wastage')">Wastage</button>
+    </div>
+  <div class="detailsArea" *ngIf="isDetailsTabActive">
+      <form #accRegForm="ngForm">
+          <div class="row">
+              <div class="col-md-12" style="padding-left: 50px;">
+                  <div class="empsection">
+                      <div class="subheading">Vendor Details</div>
+                  <div class="row" style="padding-top: 16px;">
+                      <div class="col-md-6 mt-2">
+                          <label class ="heading">Vendor :</label>&nbsp;&nbsp;
+                          <select class="inputBox" name="vendorId" #vendorId="ngModel" [(ngModel)]="model.vendorId"  required style="width: 425px;"(click)="productDropDown('vendorId',$event); getVendorDetails();">
+                            <option value="{{row.vendorId}}" *ngFor="let row of listVendordata">{{row.vendorName}}</option>
+                           </select>
+                          <p class="invalid" [class.d-none]="vendorId.valid || vendorId.untouched"> Please choose vendor</p>
+                      </div>
+                      <div class="col-md-6 mt-2">
+                        <label class ="heading">Name :</label>&nbsp;&nbsp;
+                        <input type="text"  class="inputBox" name="vendorName" #vendorName="ngModel" [(ngModel)]="vendordata.vendorName" style="width: 459px;"  readonly="readonly">
+                    </div>	     
+                   </div>
+                   <br>
+                   <div class="row" >
+                      <div class="col-md-6 mt-2">
+                          <label class ="heading">Adress :</label>&nbsp;&nbsp;
+                          <input type="email"  class="inputBox" name="emailId" #emailId="ngModel" [(ngModel)]="vendordata.emailId" style="width: 459px;"  readonly="readonly">
+                      </div>	
+                      <div class="col-md-6 mt-2">
+                        <label class ="heading">Contact:</label>&nbsp;&nbsp;
+                        <input type="text"  class="inputBox" name="vendorContactNumber"  [(ngModel)]="vendordata.vendorContactNumber" style="width: 477px;" readonly="readonly">
+                    </div>
+                 </div>  
+                 <br>
+                 <br>
+                 <div class="row" >
+                    <div class="col-md-12 mt-2">
+                        <label class ="heading">Inventory:</label>&nbsp;&nbsp;
+                        <input type="radio" name="pType" value="Y"  [(ngModel)]="model.pType" (click)="productDropDown('pType',$event)" > Raw Material
+                        <input type="radio" name="pType" value="N"  [(ngModel)]="model.pType" (click)="productDropDown('pType',$event)"> Finished Goods
+                    </div>		
+               </div>  
+               <br>
+               <br>
+               <div class="row" >
+                <div class="col-md-6 mt-2">
+                <label class ="heading">Product :</label>&nbsp;&nbsp;
+                <select  [disabled]="butDisabled" [(ngModel)]="prodDetails" name="prodDetails">
+                  <option value="">Choose..</option>
+                  <option *ngFor="let row of productWithVendordata" [ngValue]="{ name: row.itemName, id: row.itemCode,vat: row.itemVat,CD : row.itemCD,RD :row.itemRD,SD :row.itemSD,AIT : row.itemAIT,ATV :row.itemATV,TTI:row.itemTTI,price:row.itemPrice,unit:row.itemUnit}" >{{row.itemName}}</option>
+                </select>	
+                </div>
+                <div class="col-md-4 mt-2">
+                    <label class ="heading">Quantity:</label>&nbsp;&nbsp;
+                    <input type="text"  class="inputBox" name="quantity"  [(ngModel)]="prodModel.quantity" >
+                </div>
+                <div class="col-md-2 mt-2">
+                    <div class="buttonbox pointer" (click)="addProduct()" style="margin-top: 0px;">
+                        Add
+                       </div>
+                </div>
+              </div>  
+              <br>
+              <div class="tablesection">
+                  <perfect-scrollbar style="max-width: 1241px; max-height: 400px;" [config]="config">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Sl No:</th>
+                      <th>Product</th>
+                      <th>quantity</th>
+                      <th>Price</th>
+                      <th>AV</th>
+                      <th>CD(%)</th>
+                      <th>CD</th>
+                      <th>RD(%)</th>
+                      <th>RD</th>
+                      <th>SD(%)</th>
+                      <th>SD</th>
+                      <th>VAT(%)</th>
+                      <th>VAT</th>
+                      <th>AIT(%)</th>
+                      <th>AIT</th>
+                      <th>ATV(%)</th>
+                      <th>ATV</th>
+                      <th>TTI</th>
+                      <th>Rebate(%)</th>
+                      <th>Rebate </th>
+                      <th>&nbsp; </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let field of fieldArray; let i = index">
+                      <td>{{i+1}}</td>
+                      <td>{{field.itemName}}</td>
+                      <td>{{field.quantity}}</td>
+                      <td>{{field.itemPrice}}</td>
+                      <td>{{field.itemAV}}</td>
+                      <td>{{field.itemCD}}</td>
+                      <td>{{field.itemCalCD}}</td>
+                      <td>{{field.itemRD}}</td>
+                      <td>{{field.itemCalRD}}</td>
+                      <td>{{field.itemSD}}</td>
+                      <td>{{field.itemCalSD}}</td>
+                      <td>{{field.itemVat}}</td>                          
+                      <td>{{field.itemCalVat}}</td>
+                      <td>{{field.itemAIT}}</td>
+                      <td>{{field.itemCalAIT}}</td>
+                      <td>{{field.itemATV}}</td>
+                      <td>{{field.itemCalATV}}</td>
+                      <td>{{field.itemTTI}}</td>                       
+                      <td>{{field.itemRebate}}</td>
+                      <td>{{field.itemCalRebate}}</td>
+                      <td class="pointer" (click)="deleteFieldValue(i)">Delete</td>
+                    </tr>
+                  </tbody>
+                </table>
+                </perfect-scrollbar>
+              </div>
+              <br>
+              <div class="row" >
+                  <div class="col-md-6 mt-2">
+                      <label class ="heading">Total Tax :</label>&nbsp;&nbsp;
+                      <input type="text"  class="inputBox" value="{{mTax}}" readonly>
+                  </div>	
+                  <div class="col-md-6 mt-2">
+                    <label class ="heading">Total:</label>&nbsp;&nbsp;
+                    <input type="text"  class="inputBox" value="{{mTotal}}" readonly >
+                </div>
+             </div>  
+                    <br>
+                    <div class="row" >
+                        <div class="col-md-6 mt-2">
+                            <label class ="heading">Total Rebate :</label>&nbsp;&nbsp;
+                            <input type="text"  class="inputBox" value="{{mTotalRebate}}" readonly>
+                        </div>	
+                        <div class="col-md-6 mt-2">
+                          <label class ="heading">Grand Total:</label>&nbsp;&nbsp;
+                          <input type="text"  class="inputBox"  value="{{mGrandTotal}}" readonly  >
+                      </div>
+                   </div> 
+                   <br>
+                    <div class="row" >
+                        <button [disabled]="accRegForm.form.invalid" [ngClass]="accRegForm.form.invalid ?'diabled-class':'buttonbox'"  (click)="submit();" style="margin-top: 22px; margin-left: 550px;">Submit</button>
+                        <br>
+                        <!-- <div class="buttonbox pointer" (click)="submit()" style="margin-top: 22px; margin-left: 550px;">
+                            Submit
+                          </div> -->
+                    </div>
+                    </div>
+              </div>
+          </div>  
+        </form> 
+  </div>
+  <div class="extraArea" *ngIf="isExtraTabActive">
+      <div class="row" >
+          <div class="col-md-6 mt-2">
+          <label class ="heading">Name :</label>&nbsp;&nbsp;
+          <input type="text"  class="inputBox" name="extra"  [(ngModel)]="extraModel.name" >
+          </div>
+          <div class="col-md-4 mt-2">
+              <label class ="heading">Cost:</label>&nbsp;&nbsp;
+              <input type="text"  class="inputBox" name="cost"  [(ngModel)]="extraModel.cost" >
+          </div>
+          <div class="col-md-2 mt-2">
+              <div class="buttonbox pointer" (click)="addExtra()" style="margin-top: 0px;">
+                  Add
+                 </div>
+          </div>
+        </div>  
+        <br>
+        <div class="tablesection">
+            <perfect-scrollbar style="max-width: 1241px; max-height: 400px;" [config]="config">
+          <table>
+            <thead>
+              <tr>
+                <th>Sl No:</th>
+                <th>Name</th>
+                <th>Cost</th>
+                <th>&nbsp; </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let field of fieldExtraArray; let i = index">
+                <td>{{i+1}}</td>
+                <td>{{field.name}}</td>
+                <td>{{field.cost}}</td>
+                <td class="pointer" (click)="deleteExtraFieldValue(i)">Delete</td>
+              </tr>
+            </tbody>
+          </table>
+          </perfect-scrollbar>
+        </div>
+        <br>
+        <div class="row" >	
+            <div class="col-md-12 mt-2">
+              <label class ="heading">Total:</label>&nbsp;&nbsp;
+              <input type="text"  class="inputBox" value="{{extraTot}}"  readonly >
+          </div>
+       </div> 
+  </div>
+	<div class="wastageArea" *ngIf="isWastageTabActive">
+      <div class="empsection">
+          <div class="wastageSubheading">Wastage Details</div>
+          <br>
+          <div class="row" >
+           <div class="col-md-6 mt-2">
+           <label class ="heading">Product Name :</label>&nbsp;&nbsp;<br>
+           <input type="text"  class="inputBox" name="pName"  [(ngModel)]="wastageModel.pName" >
+           </div>
+           <div class="col-md-4 mt-2">
+               <label class ="heading">Product with wastage amount:</label>&nbsp;&nbsp;<br>
+               <input type="text"  class="inputBox" name="pWithWastageAmount"  [(ngModel)]="wastageModel.pWithWastageAmount" >
+           </div>
+           <div class="col-md-2 mt-2">
+              <label class ="heading">Price:</label>&nbsp;&nbsp;<br>
+              <input type="text"  class="inputBox" name="price"  [(ngModel)]="wastageModel.price" style="width:100%;">
+          </div>
+         </div>
+          <br>
+          <div class="row" >
+              <div class="col-md-6 mt-2">
+              <label class ="heading">Only wastage amount :</label>&nbsp;&nbsp;<br>
+              <input type="text"  class="inputBox" name="onlyWastageAmount"  [(ngModel)]="wastageModel.onlyWastageAmount" >
+              </div>
+              <div class="col-md-4 mt-2">
+                  <label class ="heading">Wastage Percentage:</label>&nbsp;&nbsp;<br>
+                  <input type="text"  class="inputBox" name="wastagePercentage"  [(ngModel)]="wastageModel.wastagePercentage" >
+              </div>
+              <div class="col-md-2 mt-2">
+                  <div class="buttonbox pointer" (click)="addWastage()" style="margin-top: 0px;">
+                      Add
+                     </div>
+              </div>
+            </div>
+      </div>  
+     <br>
+     <div class="tablesection">
+         <perfect-scrollbar style="max-width: 1241px; max-height: 400px;" [config]="config">
+       <table>
+         <thead>
+           <tr>
+             <th>Sl No:</th>
+             <th>Name</th>
+             <th>Product with <br> wastage amount</th>
+             <th>Price</th>
+             <th>Only wastage<br> amount</th>
+             <th>Wastage Percentage</th>
+             <th>&nbsp; </th>
+           </tr>
+         </thead>
+         <tbody>
+           <tr *ngFor="let field of fieldWastageArray; let i = index">
+             <td>{{i+1}}</td>
+             <td>{{field.pName}}</td>
+             <td>{{field.pWithWastageAmount}}</td>
+             <td>{{field.price}}</td>
+             <td>{{field.onlyWastageAmount}}</td>
+             <td>{{field.wastagePercentage}}</td>
+             <td class="pointer" (click)="deleteWastageFieldValue(i)">Delete</td>
+           </tr>
+         </tbody>
+       </table>
+       </perfect-scrollbar>
+     </div>
+     <br>
+        <div class="row" >	
+            <div class="col-md-12 mt-2">
+              <label class ="heading">Total:</label>&nbsp;&nbsp;
+              <input type="text"  class="inputBox" value="{{wastageTot}}"  readonly>
+          </div>
+       </div> 
+  </div>
+</div>

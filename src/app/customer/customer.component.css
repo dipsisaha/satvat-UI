@@ -1,0 +1,55 @@
+.title{
+    font-size: 25px;
+    padding-top: 30px;
+    padding-left: 40px;
+}
+.buttonbox{
+    margin-top: 30px;
+    opacity: 0.8;
+    background: #008081;
+    width: 118px;
+    height: 40px;
+    font-size: 14px;
+    color: #ffffff;
+    letter-spacing: 0;
+    line-height: 40px;
+    display: inline-block;
+    font-weight: bold;
+    margin-left: 402px;
+    text-align: center;
+}
+.table{
+    width: 100%;
+    max-width: 96%;
+    margin-bottom: 20px;
+    background-color: white;
+    margin-left: 2px;
+}
+.back{
+    padding-top: 30px;
+    padding-left: 23px;
+    font-weight: bolder;
+    font-size: 15px;
+  }
+.botharrowup{
+    margin-bottom:8px;
+    margin-left: 2px
+}
+
+.singlearrowup{
+    margin-bottom:8px;
+    margin-left: 2px
+}
+
+.botharrowdwn{
+  margin-left: -10px;
+    margin-top:6px;
+}
+
+.singlearrowdwn{
+    margin-left: 2px;
+    margin-top:5px;
+}
+.row{
+    margin-right: 0px;
+}
