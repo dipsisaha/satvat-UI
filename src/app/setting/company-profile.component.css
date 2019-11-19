@@ -120,3 +120,24 @@
   margin-left: 42%;
   margin-top: auto;
 }
+.tablesection {
+  width: 97%;
+  height:310px;
+  margin              : 0;
+  margin-top		  : 20px;
+  margin-bottom       : 30px;
+  border-style        : solid;
+  border-width        : 2px;
+  border-color        :#008081;
+  padding-left: 0px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table, td, th {
+  border: 1px solid #008081;
+  text-align: center;
+}

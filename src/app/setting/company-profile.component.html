@@ -20,71 +20,70 @@
             <div class="row" style="padding-top: 26px;">
                 <div class="col-md-3 mt-2">
                     <label class ="heading">Company Id :</label>&nbsp;&nbsp;<br>
-                    <input type="text"  class="inputBox" name="userName" #userName="ngModel" [(ngModel)]="model.userName" required>
-                    <p class="invalid" [class.d-none]="userName.valid || userName.untouched"> Name cannot be Blank</p>
+                    <input type="text"  class="inputBox" name="companyId" #companyId="ngModel" [(ngModel)]="model.companyId" readonly>
                 </div>
                 <div class="col-md-3 mt-2">
                         <label class ="heading">Short Name :</label>&nbsp;&nbsp;<br>
-                        <input type="text"  class="inputBox" name="userName" #userName="ngModel" [(ngModel)]="model.userName" required>
-                        <p class="invalid" [class.d-none]="userName.valid || userName.untouched"> Name cannot be Blank</p>
+                        <input type="text"  class="inputBox" name="shortName" #shortName="ngModel" [(ngModel)]="model.shortName" required>
+                        <p class="invalid" [class.d-none]="shortName.valid || shortName.untouched"> Short Name cannot be Blank</p>
                 </div> 
                 <div class="col-md-3 mt-2">
                         <label class ="heading">Email :</label>&nbsp;&nbsp;<br>
-                        <input type="text"  class="inputBox" name="userName" #userName="ngModel" [(ngModel)]="model.userName" required>
-                        <p class="invalid" [class.d-none]="userName.valid || userName.untouched"> Name cannot be Blank</p>
+                        <input type="text"  class="inputBox" name="cemail" #cemail="ngModel" [(ngModel)]="model.cemail" required>
+                        <p class="invalid" [class.d-none]="cemail.valid || cemail.untouched"> Email cannot be Blank</p>
                 </div>
                 <div class="col-md-3 mt-2">
                         <label class ="heading">Alt Email :</label>&nbsp;&nbsp;<br>
-                        <input type="text"  class="inputBox" name="userName" #userName="ngModel" [(ngModel)]="model.userName" required>
-                        <p class="invalid" [class.d-none]="userName.valid || userName.untouched"> Name cannot be Blank</p>
+                        <input type="text"  class="inputBox" name="caltEmail" #caltEmail="ngModel" [(ngModel)]="model.caltEmail" required>
+                        <p class="invalid" [class.d-none]="caltEmail.valid || caltEmail.untouched"> Alt Email cannot be Blank</p>
                 </div>     
              </div>
              <br>
              <div class="row" >
                 <div class="col-md-6 mt-2">
                     <label class ="heading">Company Name :</label>&nbsp;&nbsp;
-                    <input type="text"  class="inputBox" name="text" #email="ngModel" [(ngModel)]="model.email" style="width: 375px;" required>
-                    <p class="invalid" [class.d-none]="email.valid || email.untouched"> Email cannot be Blank</p>
+                    <input type="text"  class="inputBox" name="cname" #cname="ngModel" [(ngModel)]="model.cname" style="width: 375px;" required>
+                    <p class="invalid" [class.d-none]="cname.valid || cname.untouched"> Company Name cannot be Blank</p>
                 </div>
                 <div class="col-md-6 mt-2">
                         <label class ="heading">Fax :</label>&nbsp;&nbsp;
-                        <input type="text"  class="inputBox" name="text" #email="ngModel" [(ngModel)]="model.email" style="width: 457px;" required>
-                        <p class="invalid" [class.d-none]="email.valid || email.untouched"> Email cannot be Blank</p>
+                        <input type="text"  class="inputBox" name="cfax" #cfax="ngModel" [(ngModel)]="model.cfax" style="width: 457px;" >
+                        <p class="invalid" [class.d-none]="cfax.valid || cfax.untouched"> Fax cannot be Blank</p>
                 </div>	
            </div>  
            <br>
            <div class="row" >
             <div class="col-md-3 mt-2">
                     <label class ="heading">Mobile :</label>&nbsp;&nbsp;<br>
-                    <input type="text"  class="inputBox" name="userName" #userName="ngModel" [(ngModel)]="model.userName" required>
-                    <p class="invalid" [class.d-none]="userName.valid || userName.untouched"> Name cannot be Blank</p>
+                    <input type="text"  class="inputBox" name="cmobile" #cmobile="ngModel" [(ngModel)]="model.cmobile" required>
+                    <p class="invalid" [class.d-none]="cmobile.valid || cmobile.untouched"> Mobile cannot be Blank</p>
             </div>
             <div class="col-md-3 mt-2">
                     <label class ="heading">Alt Mobile :</label>&nbsp;&nbsp;<br>
-                    <input type="text"  class="inputBox" name="userName" #userName="ngModel" [(ngModel)]="model.userName" required>
-                    <p class="invalid" [class.d-none]="userName.valid || userName.untouched"> Name cannot be Blank</p>
+                    <input type="text"  class="inputBox" name="caltMobile" #caltMobile="ngModel" [(ngModel)]="model.caltMobile" >
+                    <p class="invalid" [class.d-none]="caltMobile.valid || caltMobile.untouched"> Alt Mobile cannot be Blank</p>
             </div>
             <div class="col-md-6 mt-2">
               <label class ="heading">Website :</label>&nbsp;&nbsp;<br>
-              <input type="email"  class="inputBox" name="address" #address="ngModel" [(ngModel)]="model.address" style="width: 500px;" required>
-              <p class="invalid" [class.d-none]="address.valid || address.untouched"> Address cannot be Blank</p>
+              <input type="text"  class="inputBox" name="cwebsite" #cwebsite="ngModel" [(ngModel)]="model.cwebsite" style="width: 500px;" >
+              <p class="invalid" [class.d-none]="cwebsite.valid || cwebsite.untouched"> Website cannot be Blank</p>
           </div>	
          </div>  
          <br>
          <div class="row" >
             <div class="col-md-3 mt-2">
                     <label class ="heading">WhatsApp :</label>&nbsp;&nbsp;<br>
-                    <input type="text"  class="inputBox" name="userName" #userName="ngModel" [(ngModel)]="model.userName" required>
-                    <p class="invalid" [class.d-none]="userName.valid || userName.untouched"> Name cannot be Blank</p>
+                    <input type="text"  class="inputBox" name="cwhatsApp" #cwhatsApp="ngModel" [(ngModel)]="model.cwhatsApp" >
+                    <p class="invalid" [class.d-none]="cwhatsApp.valid || cwhatsApp.untouched"> WhatsApp cannot be Blank</p>
             </div>
             <div class="col-md-3 mt-2">
                     <label class ="heading">Skype :</label>&nbsp;&nbsp;<br>
-                    <input type="text"  class="inputBox" name="userName" #userName="ngModel" [(ngModel)]="model.userName" required>
-                    <p class="invalid" [class.d-none]="userName.valid || userName.untouched"> Name cannot be Blank</p>
+                    <input type="text"  class="inputBox" name="cskype" #cskype="ngModel" [(ngModel)]="model.cskype" >
+                    <p class="invalid" [class.d-none]="cskype.valid || cskype.untouched"> Skype cannot be Blank</p>
             </div>  
           <div class="col-md-6 mt-2">
               <label class ="heading">Facebook :</label>&nbsp;&nbsp;<br>
-              <input type="text"  class="inputBox" name="fb"  [(ngModel)]="model.fb" style="width: 500px;" >
+              <input type="text"  class="inputBox" name="fb"  [(ngModel)]="model.cfacebook" style="width: 500px;" >
           </div>	
         </div>  
               
@@ -100,37 +99,37 @@
                         <div class="row" style="padding-top: 26px;">
                                 <div class="col-md-6 mt-2">
                                     <label class ="heading">Account Name :</label>&nbsp;&nbsp;
-                                    <input type="text"  class="inputBox" name="userName" #userName="ngModel" [(ngModel)]="model.userName"  style="width: 500px;" required>
-                                    <p class="invalid" [class.d-none]="userName.valid || userName.untouched"> Name cannot be Blank</p>
+                                    <input type="text"  class="inputBox" name="accountsName" #accountsName="ngModel" [(ngModel)]="model.accountsName"  style="width: 500px;" required>
+                                    <p class="invalid" [class.d-none]="accountsName.valid || accountsName.untouched"> Account Name cannot be Blank</p>
                                 </div>
                                 <div class="col-md-6 mt-2">
                                         <label class ="heading">Branch Name :</label>&nbsp;&nbsp;
-                                        <input type="text"  class="inputBox" name="userName" #userName="ngModel" [(ngModel)]="model.userName" style="width: 500px;">
-                                        <p class="invalid" [class.d-none]="userName.valid || userName.untouched"> Name cannot be Blank</p>
+                                        <input type="text"  class="inputBox" name="branchName" #branchName="ngModel" [(ngModel)]="model.branchName" style="width: 500px;" required>
+                                        <p class="invalid" [class.d-none]="branchName.valid || branchName.untouched"> Branch name cannot be Blank</p>
                                 </div> 
                         </div>
                         <div class="row" >
                                 <div class="col-md-6 mt-2">
                                     <label class ="heading">Account No :</label>&nbsp;&nbsp;
-                                    <input type="text"  class="inputBox" name="userName" #userName="ngModel" [(ngModel)]="model.userName" style="width: 500px;">
-                                    <p class="invalid" [class.d-none]="userName.valid || userName.untouched"> Name cannot be Blank</p>
+                                    <input type="text"  class="inputBox" name="accountsNo" #accountsNo="ngModel" [(ngModel)]="model.accountsNo" style="width: 500px;" required>
+                                    <p class="invalid" [class.d-none]="accountsNo.valid || accountsNo.untouched"> Account No. cannot be Blank</p>
                                 </div>
                                 <div class="col-md-6 mt-2">
                                         <label class ="heading">Routing No :</label>&nbsp;&nbsp;
-                                        <input type="text"  class="inputBox" name="userName" #userName="ngModel" [(ngModel)]="model.userName" style="width: 500px;">
-                                        <p class="invalid" [class.d-none]="userName.valid || userName.untouched"> Name cannot be Blank</p>
+                                        <input type="text"  class="inputBox" name="routingNo" #routingNo="ngModel" [(ngModel)]="model.routingNo" style="width: 500px;" required>
+                                        <p class="invalid" [class.d-none]="routingNo.valid || routingNo.untouched"> Routing No. cannot be Blank</p>
                                 </div> 
                         </div>
                         <div class="row" >
                                 <div class="col-md-6 mt-2">
                                     <label class ="heading">Bank Name :</label>&nbsp;&nbsp;
-                                    <input type="text"  class="inputBox" name="userName" #userName="ngModel" [(ngModel)]="model.userName" style="width: 500px;">
-                                    <p class="invalid" [class.d-none]="userName.valid || userName.untouched"> Name cannot be Blank</p>
+                                    <input type="text"  class="inputBox" name="bankName" #bankName="ngModel" [(ngModel)]="model.bankName" style="width: 500px;" required>
+                                    <p class="invalid" [class.d-none]="bankName.valid || bankName.untouched"> Bank name cannot be Blank</p>
                                 </div>
                                 <div class="col-md-6 mt-2">
                                         <label class ="heading">Swift Code :</label>&nbsp;&nbsp;
-                                        <input type="text"  class="inputBox" name="userName" #userName="ngModel" [(ngModel)]="model.userName" style="width: 500px;" >
-                                        <p class="invalid" [class.d-none]="userName.valid || userName.untouched"> Name cannot be Blank</p>
+                                        <input type="text"  class="inputBox" name="swiftCode" #swiftCode="ngModel" [(ngModel)]="model.swiftCode" style="width: 500px;">
+                                        <p class="invalid" [class.d-none]="swiftCode.valid || swiftCode.untouched"> Swift code cannot be Blank</p>
                                 </div> 
                         </div>
 
@@ -146,52 +145,51 @@
                         <div class="row" style="padding-top: 26px;">
                                 <div class="col-md-6 mt-2">
                                     <label class ="heading">Founded On :</label>&nbsp;&nbsp;<br>
-                                    <input type="text"  class="inputBox" name="userName" #userName="ngModel" [(ngModel)]="model.userName"  style="width: 500px;">
-                                    <p class="invalid" [class.d-none]="userName.valid || userName.untouched"> Name cannot be Blank</p>
+                                    <input type="text"  class="inputBox" name="foundedOn" #foundedOn="ngModel" [(ngModel)]="model.foundedOn"  style="width: 500px;" required>
+                                    <p class="invalid" [class.d-none]="foundedOn.valid || foundedOn.untouched"> Founded on cannot be Blank</p>
                                 </div>
                                 <div class="col-md-6 mt-2">
                                         <label class ="heading">E-TIN :</label>&nbsp;&nbsp;<br>
-                                        <input type="text"  class="inputBox" name="userName" #userName="ngModel" [(ngModel)]="model.userName" style="width: 500px;">
-                                        <p class="invalid" [class.d-none]="userName.valid || userName.untouched"> Name cannot be Blank</p>
+                                        <input type="text"  class="inputBox" name="eTin" #eTin="ngModel" [(ngModel)]="model.eTin" style="width: 500px;">
                                 </div> 
                         </div>
                         <div class="row">
                                 <div class="col-md-3 mt-2">
                                     <label class ="heading">BIN :</label>&nbsp;&nbsp;<br>
-                                    <input type="text"  class="inputBox" name="userName" #userName="ngModel" [(ngModel)]="model.userName" >
-                                    <p class="invalid" [class.d-none]="userName.valid || userName.untouched"> Name cannot be Blank</p>
+                                    <input type="text"  class="inputBox" name="bin" #bin="ngModel" [(ngModel)]="model.bin" >
+                                    <p class="invalid" [class.d-none]="bin.valid || bin.untouched"> BIN cannot be Blank</p>
                                 </div>
                                 <div class="col-md-3 mt-2">
                                         <label class ="heading">VAT Reg# :</label>&nbsp;&nbsp;<br>
-                                        <input type="text"  class="inputBox" name="userName" #userName="ngModel" [(ngModel)]="model.userName" >
-                                        <p class="invalid" [class.d-none]="userName.valid || userName.untouched"> Name cannot be Blank</p>
+                                        <input type="text"  class="inputBox" name="vatRegNo" #vatRegNo="ngModel" [(ngModel)]="model.vatRegNo" >
+                                        <p class="invalid" [class.d-none]="vatRegNo.valid || vatRegNo.untouched"> Vat Reg No. cannot be Blank</p>
                                 </div>
                                 <div class="col-md-3 mt-2">
                                         <label class ="heading">IRC No :</label>&nbsp;&nbsp;<br>
-                                        <input type="text"  class="inputBox" name="userName" #userName="ngModel" [(ngModel)]="model.userName" >
-                                        <p class="invalid" [class.d-none]="userName.valid || userName.untouched"> Name cannot be Blank</p>
+                                        <input type="text"  class="inputBox" name="ircNo" #ircNo="ngModel" [(ngModel)]="model.ircNo" >
+                                        <p class="invalid" [class.d-none]="ircNo.valid || ircNo.untouched"> IRC No. cannot be Blank</p>
                                 </div>
                                 <div class="col-md-3 mt-2">
                                         <label class ="heading">ERC No :</label>&nbsp;&nbsp;<br>
-                                        <input type="text"  class="inputBox" name="userName" #userName="ngModel" [(ngModel)]="model.userName" >
-                                        <p class="invalid" [class.d-none]="userName.valid || userName.untouched"> Name cannot be Blank</p>
+                                        <input type="text"  class="inputBox" name="ercNo" #ercNo="ngModel" [(ngModel)]="model.ercNo" >
+                                        <p class="invalid" [class.d-none]="ercNo.valid || ercNo.untouched"> ERC No. cannot be Blank</p>
                                 </div> 
                         </div>
                         <div class="row">
                                 <div class="col-md-6 mt-2">
                                     <label class ="heading">Incorporation Certificate No. :</label>&nbsp;&nbsp;<br>
-                                    <input type="text"  class="inputBox" name="userName" #userName="ngModel" [(ngModel)]="model.userName"  style="width: 500px;">
-                                    <p class="invalid" [class.d-none]="userName.valid || userName.untouched"> Name cannot be Blank</p>
+                                    <input type="text"  class="inputBox" name="IncorporationCertificateNo" #IncorporationCertificateNo="ngModel" [(ngModel)]="model.IncorporationCertificateNo"  style="width: 500px;">
+                                    <p class="invalid" [class.d-none]="IncorporationCertificateNo.valid || IncorporationCertificateNo.untouched"> Incorporation Certificate No. cannot be Blank</p>
                                 </div>
                                 <div class="col-md-3 mt-2">
                                         <label class ="heading">Trade License No :</label>&nbsp;&nbsp;<br>
-                                        <input type="text"  class="inputBox" name="userName" #userName="ngModel" [(ngModel)]="model.userName" >
-                                        <p class="invalid" [class.d-none]="userName.valid || userName.untouched"> Name cannot be Blank</p>
+                                        <input type="text"  class="inputBox" name="tradeLisenceNo" #tradeLisenceNo="ngModel" [(ngModel)]="model.tradeLisenceNo" >
+                                        <p class="invalid" [class.d-none]="tradeLisenceNo.valid || tradeLisenceNo.untouched"> Trade Lisence No. cannot be Blank</p>
                                 </div>
                                 <div class="col-md-3 mt-2">
                                         <label class ="heading">Area Code :</label>&nbsp;&nbsp;<br>
-                                        <input type="text"  class="inputBox" name="userName" #userName="ngModel" [(ngModel)]="model.userName">
-                                        <p class="invalid" [class.d-none]="userName.valid || userName.untouched"> Name cannot be Blank</p>
+                                        <input type="text"  class="inputBox" name="areaCode" #areaCode="ngModel" [(ngModel)]="model.areaCode">
+                                        <p class="invalid" [class.d-none]="areaCode.valid || areaCode.untouched"> Area Code cannot be Blank</p>
                                 </div>  
                         </div>
                     </div>
@@ -218,14 +216,14 @@
                                        <div class="row">
                                             <div class="col-md-12 mt-2 ">
                                                     <label class ="heading">Road :</label>&nbsp;&nbsp;<br>
-                                                    <input type="text"  class="inputBox" name="billingaddr_road" #billingaddr_road="ngModel" [(ngModel)]="addressmodal.billingaddr_road" style="width: inherit;" required>
+                                                    <input type="text"  class="inputBox" name="billingaddr_road" #billingaddr_road="ngModel" [(ngModel)]="addressmodal.billingaddr_road" style="width: inherit;" >
                                                     <p class="invalid" [class.d-none]="billingaddr_road.valid || billingaddr_road.untouched"> Road cannot be Blank</p>
                                             </div>                                            
                                        </div>
                                        <div class="row">
                                             <div class="col-md-6 mt-2 ">
                                                     <label class ="heading">Sector :</label>&nbsp;&nbsp;<br>
-                                                    <input type="text"  class="inputBox" name="billingaddr_sector" #billingaddr_sector="ngModel" [(ngModel)]="addressmodal.billingaddr_sector" style="width: 255px;" required>
+                                                    <input type="text"  class="inputBox" name="billingaddr_sector" #billingaddr_sector="ngModel" [(ngModel)]="addressmodal.billingaddr_sector" style="width: 255px;" >
                                                     <p class="invalid" [class.d-none]="billingaddr_sector.valid || billingaddr_sector.untouched"> Sector cannot be Blank</p>
                                             </div>
                                             <div class="col-md-6 mt-2 ">
@@ -237,7 +235,7 @@
                                        <div class="row">
                                             <div class="col-md-6 mt-2 ">
                                                     <label class ="heading">City :</label>&nbsp;&nbsp;<br>
-                                                    <input type="text"  class="inputBox" name="billingaddr_city" #billingaddr_city="ngModel" [(ngModel)]="addressmodal.billingaddr_city" style="width: 255px;" required>
+                                                    <input type="text"  class="inputBox" name="billingaddr_city" #billingaddr_city="ngModel" [(ngModel)]="addressmodal.billingaddr_city" style="width: 255px;" >
                                                     <p class="invalid" [class.d-none]="billingaddr_city.valid || billingaddr_city.untouched"> City cannot be Blank</p>
                                             </div>
                                             <div class="col-md-6 mt-2 ">
@@ -249,12 +247,12 @@
                                        <div class="row">
                                             <div class="col-md-6 mt-2 ">
                                                     <label class ="heading">Post Code :</label>&nbsp;&nbsp;<br>
-                                                    <input type="text"  class="inputBox" name="billingaddr_postcode" #billingaddr_postcode="ngModel" [(ngModel)]="addressmodal.billingaddr_postcode" style="width: 255px;">
+                                                    <input type="text"  class="inputBox" name="billingaddr_postcode" #billingaddr_postcode="ngModel" [(ngModel)]="addressmodal.billingaddr_postcode" style="width: 255px;" required>
                                                     <p class="invalid" [class.d-none]="billingaddr_postcode.valid || billingaddr_postcode.untouched"> Post Code cannot be Blank</p>
                                             </div> 
                                             <div class="col-md-6 mt-2 ">
                                                     <label class ="heading">Country :</label>&nbsp;&nbsp;<br>
-                                                    <input type="text"  class="inputBox" name="billingaddr_country" #billingaddr_country="ngModel" [(ngModel)]="addressmodal.billingaddr_country" style="width: 255px;">
+                                                    <input type="text"  class="inputBox" name="billingaddr_country" #billingaddr_country="ngModel" [(ngModel)]="addressmodal.billingaddr_country" style="width: 255px;" required>
                                                     <p class="invalid" [class.d-none]="billingaddr_country.valid || billingaddr_country.untouched"> Country cannot be Blank</p>
                                             </div>                                            
                                        </div>
@@ -266,7 +264,7 @@
                                                <div class="row">
                                                     <div class="col-md-12 mt-2 ">
                                                             <label class ="heading">House :</label>&nbsp;&nbsp;<br>
-                                                            <input type="text"  class="inputBox" name="shippingaddr_house" #shippingaddr_house="ngModel" [(ngModel)]="addressmodal.shippingaddr_house" style="width: 550px;">
+                                                            <input type="text"  class="inputBox" name="shippingaddr_house" #shippingaddr_house="ngModel" [(ngModel)]="addressmodal.shippingaddr_house" style="width: 550px;" required>
                                                             <p class="invalid" [class.d-none]="shippingaddr_house.valid || shippingaddr_house.untouched"> House cannot be Blank</p>
                                                     </div>                                            
                                                </div>
@@ -285,7 +283,7 @@
                                                     </div>
                                                     <div class="col-md-6 mt-2 ">
                                                             <label class ="heading">P.S :</label>&nbsp;&nbsp;<br>
-                                                            <input type="text"  class="inputBox" name="shippingaddr_thana" #shippingaddr_thana="ngModel" [(ngModel)]="addressmodal.shippingaddr_thana" style="width: 235px;">
+                                                            <input type="text"  class="inputBox" name="shippingaddr_thana" #shippingaddr_thana="ngModel" [(ngModel)]="addressmodal.shippingaddr_thana" style="width: 235px;" required>
                                                             <p class="invalid" [class.d-none]="shippingaddr_thana.valid || shippingaddr_thana.untouched"> P.S cannot be Blank</p>
                                                     </div>                                            
                                                </div>
@@ -297,19 +295,19 @@
                                                     </div>
                                                     <div class="col-md-6 mt-2 ">
                                                             <label class ="heading">District :</label>&nbsp;&nbsp;<br>
-                                                            <input type="text"  class="inputBox" name="shippingaddr_district" #shippingaddr_district="ngModel" [(ngModel)]="addressmodal.shippingaddr_district" style="width: 235px;">
+                                                            <input type="text"  class="inputBox" name="shippingaddr_district" #shippingaddr_district="ngModel" [(ngModel)]="addressmodal.shippingaddr_district" style="width: 235px;" required>
                                                             <p class="invalid" [class.d-none]="shippingaddr_district.valid || shippingaddr_district.untouched"> District cannot be Blank</p>
                                                     </div>                                           
                                                </div>
                                                <div class="row">
                                                     <div class="col-md-6 mt-2 ">
                                                             <label class ="heading">Post Code :</label>&nbsp;&nbsp;<br>
-                                                            <input type="text"  class="inputBox" name="shippingaddr_postcode" #shippingaddr_postcode="ngModel" [(ngModel)]="addressmodal.shippingaddr_postcode" style="width: 235px;">
+                                                            <input type="text"  class="inputBox" name="shippingaddr_postcode" #shippingaddr_postcode="ngModel" [(ngModel)]="addressmodal.shippingaddr_postcode" style="width: 235px;" required>
                                                             <p class="invalid" [class.d-none]="shippingaddr_postcode.valid || shippingaddr_postcode.untouched"> P.O cannot be Blank</p>
                                                     </div> 
                                                     <div class="col-md-6 mt-2 ">
                                                             <label class ="heading">Country :</label>&nbsp;&nbsp;<br>
-                                                            <input type="text"  class="inputBox" name="shippingaddr_country" #shippingaddr_country="ngModel" [(ngModel)]="addressmodal.shippingaddr_country" style="width: 235px;">
+                                                            <input type="text"  class="inputBox" name="shippingaddr_country" #shippingaddr_country="ngModel" [(ngModel)]="addressmodal.shippingaddr_country" style="width: 235px;" required>
                                                             <p class="invalid" [class.d-none]="shippingaddr_country.valid || shippingaddr_country.untouched"> Country cannot be Blank</p>
                                                     </div>                                            
                                                </div>
@@ -323,53 +321,86 @@
   <div class="tableArea" *ngIf="isContactTabActive">
         <div class="row">
                 <div class="col-md-12" style="padding-left: 50px;">
-                    <div class="empsection">
+                    <div class="empsection" style="height: 363px !important;">
                         <div class="subheading">Company Profile</div>
                         <div class="row" style="padding-top: 26px;">
                                 <div class="col-md-6 mt-2">
                                     <label class ="heading">Name :</label>&nbsp;&nbsp;<br>
-                                    <input type="text"  class="inputBox" name="userName" #userName="ngModel" [(ngModel)]="model.userName"  style="width: 500px;">
-                                    <p class="invalid" [class.d-none]="userName.valid || userName.untouched"> Name cannot be Blank</p>
+                                    <input type="text"  class="inputBox" name="personName" #personName="ngModel" [(ngModel)]="contactmodal.personName"  style="width: 500px;" >
+                                    <p class="invalid" [class.d-none]="personName.valid || personName.untouched"> Name cannot be Blank</p>
                                 </div>
                                 <div class="col-md-6 mt-2">
                                         <label class ="heading">Address :</label>&nbsp;&nbsp;<br>
-                                        <input type="text"  class="inputBox" name="userName" #userName="ngModel" [(ngModel)]="model.userName" style="width: 500px;">
-                                        <p class="invalid" [class.d-none]="userName.valid || userName.untouched"> Name cannot be Blank</p>
+                                        <input type="text"  class="inputBox" name="personAddress" #personAddress="ngModel" [(ngModel)]="contactmodal.personAddress" style="width: 500px;">
+                                        <p class="invalid" [class.d-none]="personAddress.valid || personAddress.untouched"> Address cannot be Blank</p>
                                 </div> 
                         </div>
                         <div class="row">
                                 <div class="col-md-6 mt-2 ">
                                         <label class ="heading">Mobile :</label>&nbsp;&nbsp;<br>
-                                        <input type="text"  class="inputBox" name="userName" #userName="ngModel" [(ngModel)]="model.userName" style="width: 500px;">
-                                        <p class="invalid" [class.d-none]="userName.valid || userName.untouched"> Name cannot be Blank</p>
+                                        <input type="text"  class="inputBox" name="personMobile" #personMobile="ngModel" [(ngModel)]="contactmodal.personMobile" style="width: 500px;" >
+                                        <p class="invalid" [class.d-none]="personMobile.valid || personMobile.untouched"> Mobile cannot be Blank</p>
                                 </div>
                                 <div class="col-md-6 mt-2 ">
                                         <label class ="heading">NID :</label>&nbsp;&nbsp;<br>
-                                        <input type="text"  class="inputBox" name="userName" #userName="ngModel" [(ngModel)]="model.userName" style="width: 500px;">
-                                        <p class="invalid" [class.d-none]="userName.valid || userName.untouched"> Name cannot be Blank</p>
+                                        <input type="text"  class="inputBox" name="personNid" #personNid="ngModel" [(ngModel)]="contactmodal.personNid" style="width: 500px;">
+                                        <p class="invalid" [class.d-none]="personNid.valid || personNid.untouched"> NID cannot be Blank</p>
                                 </div>                                           
                            </div>
                         <div class="row">
                                 <div class="col-md-6 mt-2 ">
                                         <label class ="heading">Email :</label>&nbsp;&nbsp;<br>
-                                        <input type="text"  class="inputBox" name="userName" #userName="ngModel" [(ngModel)]="model.userName" style="width: 500px;">
-                                        <p class="invalid" [class.d-none]="userName.valid || userName.untouched"> Name cannot be Blank</p>
+                                        <input type="text"  class="inputBox" name="personEmail" #personEmail="ngModel" [(ngModel)]="contactmodal.personEmail" style="width: 500px;" >
+                                        <p class="invalid" [class.d-none]="personEmail.valid || personEmail.untouched"> Email cannot be Blank</p>
                                 </div>
                                 <div class="col-md-6 mt-2 ">
                                         <label class ="heading">Designation :</label>&nbsp;&nbsp;<br>
-                                        <input type="text"  class="inputBox" name="userName" #userName="ngModel" [(ngModel)]="model.userName" style="width: 500px;">
-                                        <p class="invalid" [class.d-none]="userName.valid || userName.untouched"> Name cannot be Blank</p>
+                                        <input type="text"  class="inputBox" name="personDesignation" #personDesignation="ngModel" [(ngModel)]="contactmodal.personDesignation" style="width: 500px;">
+                                        <p class="invalid" [class.d-none]="personDesignation.valid || personDesignation.untouched"> Designation cannot be Blank</p>
                                 </div>                                           
                         </div>
                         <br>
                         <div class="row" >
-                            <button [disabled]="accRegForm.form.invalid" [ngClass]="accRegForm.form.invalid ?'diabled-class':'buttonbox'"  (click)="submit();" style="margin-top: 22px; margin-left: 550px;">Add new Contact Person</button>
+                            <!-- <button [disabled]="accRegForm.form.invalid" [ngClass]="accRegForm.form.invalid ?'diabled-class':'buttonbox'"  (click)="addContact();" style="margin-top: 22px; margin-left: 550px;">Add new Contact Person</button> -->
+                            <div class="buttonbox pointer" (click)="addContact()" style="margin-top: 0px;margin-left: 42%;">
+                                Add new Contact Person
+                               </div>
                         </div>
+                    </div>
+                    <br>
+                    <div class="tablesection">
+                        <perfect-scrollbar style="max-width: 1241px; max-height: 400px;" [config]="config">
+                      <table>
+                        <thead>
+                          <tr>
+                            <th>Sl No:</th>
+                            <th>Name</th>
+                            <th>Address</th>
+                            <th>Mobile</th>
+                            <th>NID</th>
+                            <th>Email</th>
+                            <th>Designation </th>
+                            <th>&nbsp; </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let field of fieldArray; let i = index">
+                            <td>{{i+1}}</td>
+                            <td>{{field.personName}}</td>
+                            <td>{{field.personAddress}}</td>
+                            <td>{{field.personMobile}}</td>
+                            <td>{{field.personNid}}</td>
+                            <td>{{field.personEmail}}</td>
+                            <td>{{field.personDesignation}}</td>
+                            <td class="pointer" (click)="deleteContactFieldValue(i)">Delete</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      </perfect-scrollbar>
                     </div>
                 </div>
         </div>
   </div>
-  <br>
   <br>
   <div class="row" >
         <button [disabled]="accRegForm.form.invalid" [ngClass]="accRegForm.form.invalid ?'diabled-class':'buttonbox'"  (click)="submit();" style="margin-top: 22px; margin-left: 550px;">Submit</button>
@@ -379,4 +410,5 @@
           </div> -->
     </div>
   </form>
+  <br>
   </div>

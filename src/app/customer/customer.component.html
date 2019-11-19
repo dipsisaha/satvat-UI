@@ -31,7 +31,7 @@
                     >
                 </span>
               </th>
-              <th class="pointer" (click)="setOrder('itemName','string',reverse['itemName'])" style="width:12%">Name
+              <th class="pointer" (click)="setOrder('itemName','string',reverse['itemName'])" style="width:12%">Code
                   <span>
                       <img src="../assets/img/sort_black_up.png" *ngIf="reverse['itemName']==undefined || order != 'itemName'|| reverse['empName']" 
                       [ngClass]="{'botharrowup':(reverse['itemName']==undefined|| order != 'itemName'),
@@ -45,7 +45,7 @@
                       >
                   </span>
               </th>
-              <th class="pointer" (click)="setOrder('itemPrice','string',reverse['itemPrice'])" style="width:12%">Price
+              <th class="pointer" (click)="setOrder('itemPrice','string',reverse['itemPrice'])" style="width:12%">Name
                   <span>
                       <img src="../assets/img/sort_black_up.png" *ngIf="reverse['itemPrice']==undefined || order != 'itemPrice'|| reverse['itemPrice']" 
                       [ngClass]="{'botharrowup':(reverse['itemPrice']==undefined|| order != 'itemPrice'),
@@ -59,7 +59,7 @@
                       >
                   </span>
               </th> 
-              <th class="pointer" (click)="setOrder('itemUnit','string',reverse['itemUnit'])" style="width:12%">Unit
+              <th class="pointer" (click)="setOrder('itemUnit','string',reverse['itemUnit'])" style="width:12%">Mobile
                 <span>
                     <img src="../assets/img/sort_black_up.png" *ngIf="reverse['itemUnit']==undefined || order != 'itemUnit'|| reverse['itemUnit']" 
                     [ngClass]="{'botharrowup':(reverse['itemUnit']==undefined|| order != 'itemUnit'),

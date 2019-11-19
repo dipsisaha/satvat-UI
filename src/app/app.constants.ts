@@ -45,6 +45,11 @@ export class ApplicationConstants {
     public static GET_VENDOR_DETAILS_BY_ID = 'getVendorById';
     public static DELETE_VENDOR = 'deleteByVendorId';
     public static GET_PRODUCT_BY_VENDOR_AND_RAW= 'getItemByVendorIdAndRawmat';
+
+    
+    public static UPDATE_COMPANY = 'companyProfile';
+    public static GET_COMPANY_DETAILS = 'getCompanyDetails';
+    public static COMPANY_ID="1";
     
     public static API_LOGIN = 'login';
     
