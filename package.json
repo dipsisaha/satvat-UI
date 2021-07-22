@@ -49,7 +49,7 @@
     "rxjs": "^6.3.3",
     "rxjs-compat": "6.2.0",
     "tether": "^1.4.0",
-    "xlsx": "^0.13.3",
+    "xlsx": "^0.17.0",
     "zone.js": "^0.8.26"
   },
   "devDependencies": {
